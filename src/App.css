@@ -1,38 +1,50 @@
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #100f46;
+  overflow-y: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.concur-box {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.tweet-box {
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ }
+
+
+
+
+
+.concur-box {
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80vh;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-top: 80px;
+  padding: 20px 40px;
+  overflow-y: auto;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width:640px) {
+  .concur-box {
+    width:100%;
+    display: block;
+    padding: 5px 8px;
   }
-  to {
-    transform: rotate(360deg);
+  #twitter-widget-0 {
+    width:400px !important;
   }
 }

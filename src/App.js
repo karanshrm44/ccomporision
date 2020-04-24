@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import tweets from './data';
+import {TwitterTweetEmbed} from 'react-twitter-embed';
 
 function App() {
+
+  let mapItem =  (item) => (
+    <div className = "tweet-box">
+        <TwitterTweetEmbed tweetId = {item.id} />
+    </div>
+  )
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1 style = {{
+          color:'#fff',
+          fontSize:40,
+          margin:0,
+          marginLeft:'auto',
+          marginRight:'auto',
+          textAlign:'center',
+          paddingTop:25
+        }}>Concur Customer Review</h1>
+        <div className = "concur-box">
+            {
+              tweets.map(mapItem)
+            }
+        </div>
     </div>
   );
 }
